@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" font-family="Georgia, serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#14284a"/><stop offset="1" stop-color="#060b16"/></linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f1e4c3"/><stop offset="1" stop-color="#c9973f"/></linearGradient>
+    <pattern id="qr" width="60" height="60" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="30" height="30" fill="#f1e4c3"/><rect x="30" y="30" width="30" height="30" fill="#f1e4c3"/>
+      <rect x="30" y="0" width="12" height="12" fill="#f1e4c3"/><rect x="0" y="42" width="18" height="18" fill="#f1e4c3"/><rect x="48" y="18" width="12" height="12" fill="#f1e4c3"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <!-- QR card -->
+  <g transform="translate(110 110)">
+    <rect width="520" height="580" rx="36" fill="#f1e4c3"/>
+    <rect x="40" y="40" width="440" height="440" rx="12" fill="#0b1426"/>
+    <rect x="56" y="56" width="408" height="408" fill="url(#qr)" opacity=".9"/>
+    <!-- finder patterns -->
+    <g><rect x="56" y="56" width="120" height="120" fill="#0b1426"/><rect x="72" y="72" width="88" height="88" fill="#f1e4c3"/><rect x="92" y="92" width="48" height="48" fill="#0b1426"/>
+       <rect x="344" y="56" width="120" height="120" fill="#0b1426"/><rect x="360" y="72" width="88" height="88" fill="#f1e4c3"/><rect x="380" y="92" width="48" height="48" fill="#0b1426"/>
+       <rect x="56" y="344" width="120" height="120" fill="#0b1426"/><rect x="72" y="360" width="88" height="88" fill="#f1e4c3"/><rect x="92" y="380" width="48" height="48" fill="#0b1426"/></g>
+    <rect x="215" y="215" width="90" height="90" rx="20" fill="url(#gold)"/>
+    <rect x="40" y="506" width="200" height="16" rx="8" fill="#14284a" fill-opacity=".7"/><rect x="40" y="534" width="130" height="12" rx="6" fill="#14284a" fill-opacity=".35"/>
+  </g>
+  <!-- phone scanning -->
+  <g transform="translate(720 150) rotate(7)">
+    <rect width="300" height="560" rx="46" fill="#0b1426" stroke="#d9ad5f" stroke-opacity=".5" stroke-width="3"/>
+    <g fill="none" stroke="#d9ad5f" stroke-width="6" stroke-linecap="round"><path d="M60 140v-40h40"/><path d="M240 140v-40h-40"/><path d="M60 300v40h40"/><path d="M240 300v40h-40"/></g>
+    <rect x="70" y="214" width="160" height="4" rx="2" fill="#d9ad5f"/>
+    <circle cx="150" cy="440" r="40" fill="url(#gold)"/><path d="M130 440l14 14 28-30" fill="none" stroke="#1a1306" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="80" y="500" width="140" height="12" rx="6" fill="#f1e4c3" fill-opacity=".3"/>
+  </g>
+</svg>

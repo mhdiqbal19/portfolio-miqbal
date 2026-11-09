@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+:root {
+  --background: #060b16;
+  --foreground: #f4ecdc;
+  --accent: #d9ad5f; /* brass / gold from the jacket buttons & batik */
+  --accent-ink: #1a1306;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-geist-sans);
+  --font-serif: var(--font-cormorant), Georgia, serif;
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  background: var(--background);
+}
+
+body {
+  /* dusk sky, fixed so it never scrolls away */
+  background:
+    radial-gradient(120% 90% at 75% -10%, #1c3560 0%, #0c1830 45%, #060b16 75%) fixed,
+    var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* keyboard focus: visible brass ring (mouse clicks don't trigger it) */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 100;
+  transform: translateY(-200%);
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+.glass {
+  background: rgba(8, 12, 24, 0.6);
+  border: 1px solid rgba(217, 173, 95, 0.22);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* Kawung-inspired batik tile, drifting very slowly; opacity is scrubbed by GSAP */
+.batik-bg {
+  opacity: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='90' height='90'><g fill='none' stroke='%23d9ad5f' stroke-width='1' stroke-opacity='.28'><circle cx='0' cy='0' r='45'/><circle cx='90' cy='0' r='45'/><circle cx='0' cy='90' r='45'/><circle cx='90' cy='90' r='45'/><circle cx='45' cy='45' r='12'/></g><circle cx='45' cy='45' r='3' fill='%23d9ad5f' fill-opacity='.35'/></svg>");
+  background-size: 90px 90px;
+  -webkit-mask-image: radial-gradient(ellipse 90% 70% at 70% 35%, #000 0%, transparent 80%);
+  mask-image: radial-gradient(ellipse 90% 70% at 70% 35%, #000 0%, transparent 80%);
+  /* static on purpose: animating a masked full-screen layer repaints it every frame */
+}
+
+/* intro: portrait eases in from the dark (CSS so it can't fight the GSAP scroll tweens) */
+@keyframes photo-intro {
+  from { opacity: 0; transform: scale(1.06); }
+  to { opacity: 1; transform: scale(1); }
+}
+.photo-intro {
+  animation: photo-intro 1.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .photo-intro { animation: none; }
+}
+
+/* Desktop: portrait dissolves into the dark on its left edge */
+@media (min-width: 768px) {
+  .photo-mask {
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 38%);
+    mask-image: linear-gradient(to right, transparent 0%, #000 38%);
+  }
+}

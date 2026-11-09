@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" font-family="Georgia, serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f2447"/><stop offset="1" stop-color="#060b16"/></linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1e4c3"/><stop offset="1" stop-color="#c9973f"/></linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <!-- browser window -->
+  <g transform="translate(100 100)">
+    <rect width="1000" height="600" rx="28" fill="#0b1426" stroke="#d9ad5f" stroke-opacity=".35" stroke-width="2"/>
+    <rect width="1000" height="56" rx="28" fill="#ffffff" fill-opacity=".05"/>
+    <g fill="#d9ad5f" fill-opacity=".6"><circle cx="34" cy="28" r="7"/><circle cx="58" cy="28" r="7" fill-opacity=".4"/><circle cx="82" cy="28" r="7" fill-opacity=".25"/></g>
+    <rect x="300" y="14" width="400" height="28" rx="14" fill="#ffffff" fill-opacity=".07"/>
+    <!-- sidebar -->
+    <rect x="0" y="56" width="200" height="544" fill="#ffffff" fill-opacity=".03"/>
+    <rect x="28" y="92" width="120" height="14" rx="7" fill="#d9ad5f"/>
+    <g fill="#f1e4c3" fill-opacity=".18"><rect x="28" y="140" width="144" height="36" rx="12" fill-opacity=".3"/><rect x="28" y="190" width="144" height="36" rx="12"/><rect x="28" y="240" width="144" height="36" rx="12"/><rect x="28" y="290" width="144" height="36" rx="12"/></g>
+    <!-- stat cards -->
+    <g>
+      <rect x="230" y="92" width="224" height="110" rx="20" fill="#ffffff" fill-opacity=".06" stroke="#d9ad5f" stroke-opacity=".25"/><rect x="254" y="118" width="80" height="10" rx="5" fill="#f1e4c3" fill-opacity=".4"/><rect x="254" y="146" width="130" height="28" rx="8" fill="url(#gold)"/>
+      <rect x="478" y="92" width="224" height="110" rx="20" fill="#ffffff" fill-opacity=".06" stroke="#d9ad5f" stroke-opacity=".25"/><rect x="502" y="118" width="80" height="10" rx="5" fill="#f1e4c3" fill-opacity=".4"/><rect x="502" y="146" width="110" height="28" rx="8" fill="#f1e4c3" fill-opacity=".8"/>
+      <rect x="726" y="92" width="244" height="110" rx="20" fill="#ffffff" fill-opacity=".06" stroke="#d9ad5f" stroke-opacity=".25"/><rect x="750" y="118" width="80" height="10" rx="5" fill="#f1e4c3" fill-opacity=".4"/><rect x="750" y="146" width="140" height="28" rx="8" fill="#2f548f"/>
+    </g>
+    <!-- chart -->
+    <rect x="230" y="224" width="472" height="220" rx="20" fill="#ffffff" fill-opacity=".05"/>
+    <g fill="url(#gold)"><rect x="262" y="360" width="34" height="56" rx="6"/><rect x="316" y="320" width="34" height="96" rx="6"/><rect x="370" y="340" width="34" height="76" rx="6"/><rect x="424" y="290" width="34" height="126" rx="6"/><rect x="478" y="310" width="34" height="106" rx="6"/><rect x="532" y="262" width="34" height="154" rx="6"/><rect x="586" y="284" width="34" height="132" rx="6"/><rect x="640" y="246" width="34" height="170" rx="6"/></g>
+    <path d="M262 340 C 340 300, 420 330, 500 280 S 620 250, 674 226" fill="none" stroke="#f1e4c3" stroke-width="3" stroke-opacity=".7"/>
+    <!-- donut -->
+    <rect x="726" y="224" width="244" height="220" rx="20" fill="#ffffff" fill-opacity=".05"/>
+    <circle cx="848" cy="334" r="56" fill="none" stroke="#ffffff" stroke-opacity=".12" stroke-width="22"/>
+    <circle cx="848" cy="334" r="56" fill="none" stroke="#d9ad5f" stroke-width="22" stroke-dasharray="230 352" transform="rotate(-90 848 334)"/>
+    <!-- table -->
+    <g fill="#f1e4c3" fill-opacity=".1"><rect x="230" y="466" width="740" height="30" rx="10"/><rect x="230" y="506" width="740" height="30" rx="10"/><rect x="230" y="546" width="740" height="30" rx="10"/></g>
+  </g>
+</svg>
